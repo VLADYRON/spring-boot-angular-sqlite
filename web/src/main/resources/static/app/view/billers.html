@@ -1,0 +1,25 @@
+<div class="jumbotron">
+    <h1>This is billers page</h1>
+    <p>Here is all billers! They make me rich too! O_O</p>
+    <div class="btn btn-primary" ng-click="showBillerDialog()">New Biller</div>
+</div>
+
+<div class="col-sm-12">
+    <h4 class="text-left">Billers</h4>
+    <div class="table-responsive">
+        <table class="table table-hover table-condensed table-striped">
+            <thead>
+            <tr>
+                <th class="col-md-2">ID</th>
+                <th class="col-md-2">Name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="biller in billers" ng-click="showBillerDialog(biller)" class="tr-editable">
+                <td>{{biller.id}}</td>
+                <td>{{biller.name}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

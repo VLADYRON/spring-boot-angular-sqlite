@@ -1,0 +1,26 @@
+<div id="testInfoDialogModal">
+    <div class="modal-header">
+        <h3 class="modal-title">New Biller</h3>
+    </div>
+    <div class="modal-body">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Name *</label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" name="name" ng-model="newBiller.name" value="{{newBiller.name}}"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <div ng-show="newEntryAdded" class="bg-success">New entry added sucesfully!</div>
+        <div ng-show="newEntryUpdated" class="bg-warning">Entry updated sucesfully!</div>
+        <div ng-show="error != ''" class="bg-danger">All required fields should be filled!</div>
+
+        <button ng-show="!newBiller.id" class="btn btn-success pull-left" type="button" ng-click="addBiller()">Add</button>
+        <button ng-show="newBiller.id" class="btn btn-danger pull-left" type="button" ng-click="removeBiller()">Remove</button>
+        <button ng-show="newBiller.id" class="btn btn-warning pull-left" type="button" ng-click="updateBiller()">Update</button>
+
+        <button class="btn btn-warning" type="button" ng-click="close()">Close</button>
+    </div>
+</div>

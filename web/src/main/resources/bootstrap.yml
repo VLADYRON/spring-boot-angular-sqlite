@@ -1,0 +1,13 @@
+spring:
+  profiles.active: dev
+---
+spring:
+  profiles: dev
+
+  application:
+    name: web-service
+  messages:
+    basename: i18n/messages
+
+server:
+  port: 8080

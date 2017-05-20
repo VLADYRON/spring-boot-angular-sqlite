@@ -1,0 +1,44 @@
+<div id="testInfoDialogModal">
+    <div class="modal-header">
+        <h3 class="modal-title">New Customer</h3>
+    </div>
+    <div class="modal-body">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">First name *</label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" name="firstName" ng-model="newCustomer.firstName"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Last name *</label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" name="lastName" ng-model="newCustomer.lastName"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Date of birth *</label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" name="dateOfBirth" ng-model="newCustomer.dateOfBirth"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Adress *</label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" name="adress" ng-model="newCustomer.adress"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <div ng-show="newEntryAdded" class="bg-success">New entry added sucesfully!</div>
+        <div ng-show="newEntryUpdated" class="bg-warning">Entry updated sucesfully!</div>
+        <div ng-show="error != ''" class="bg-danger">All required fields should be filled!</div>
+
+        <button ng-show="!newCustomer.id" class="btn btn-success pull-left" type="button" ng-click="addCustomer()">Add</button>
+        <button ng-show="newCustomer.id" class="btn btn-danger pull-left" type="button" ng-click="removeCustomer()">Remove</button>
+        <button ng-show="newCustomer.id" class="btn btn-warning pull-left" type="button" ng-click="updateCustomer()">Update</button>
+
+        <button class="btn btn-warning" type="button" ng-click="close()">Close</button>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="jumbotron">
+    <h1>This is payments page</h1>
+    <p>Add new payments! Make me rich! O_O</p>
+    <div class="btn btn-primary" ng-click="showPaymentDialog()">New Payment</div>
+</div>
+
+<div class="col-sm-12">
+    <h4 class="text-left">Payments</h4>
+    <div class="table-responsive">
+        <table class="table table-hover table-condensed table-striped">
+            <thead>
+                <tr>
+                    <th class="col-md-2">Date</th>
+                    <th class="col-md-2">Customer</th>
+                    <th class="col-md-2">Biller</th>
+                    <th class="col-md-1">Account</th>
+                    <th class="col-md-1">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="payment in payments">
+                    <td>{{payment.date}}</td>
+                    <td>{{payment.customer.lastName}} {{payment.customer.firstName}}</td>
+                    <td>{{payment.biller.name}}</td>
+                    <td>{{payment.account}}</td>
+                    <td>{{payment.amount}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

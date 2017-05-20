@@ -1,0 +1,27 @@
+/*!
+ * Custom CSS
+ */
+
+body {
+
+}
+
+.word-wrapable {
+    word-wrap: break-word;
+}
+
+.tr-editable {
+    cursor: pointer;
+}
+
+
+
+/*!
+ * If screen width lower than 1000px
+ */
+@media only screen and (max-width: 1000px) {
+    .nav-tabs>li {
+        float: none;
+    }
+
+}
